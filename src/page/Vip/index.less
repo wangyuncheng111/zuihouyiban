@@ -1,0 +1,239 @@
+.vip {
+  width: 100%;
+  height: 1200px;
+  .nav-vip {
+    .nav-vip-title {
+      text-align: center;
+      position: absolute;
+      top: 5%;
+      left: 0;
+      right: 0;
+      font-size: 22px;
+      z-index: 10;
+      color: white;
+    }
+    .non-back {
+      width: 100%;
+      height: 133.375px;
+      background: #FFB53E;
+    }
+    //img{
+    //  position: relative;
+    //  width: 100%;
+    //  top: 0;
+    //}
+    .box-container {
+      margin-top: -55px;
+      padding: 0 23.375px;
+      .vip-img-box {
+        background: url("https://j-image.missfresh.cn/img_20180102172055698.png") no-repeat;
+        height: 220px;
+        background-size: 100%;
+        max-width: 100%;
+        position: relative;
+        line-height: 1;
+        .right-box {
+          padding-top: 14.3px;
+          width: 100%;
+          .vip-icon {
+            height: 33.75px;
+            position: relative;
+            .icon-more {
+              width: 100%;
+              .icon-item {
+                display: inline-block;
+                max-width: 65.26px;
+                min-width: 33.33%;
+                margin-bottom: 4.375px;
+                text-align: center;
+                height: 70.5px;
+                .icon-img {
+                  width: 35px;
+                  height: 35px;
+                  margin-bottom: 2.5px;
+                  display: inline-block;
+                }
+                .icon-text {
+                  font-size: 12px;
+                  color: #B17630;
+                  display: block;
+                  overflow: hidden;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                }
+              }
+            }
+          }
+        }
+        .calc-info {
+          display: inline-block;
+          position: absolute;
+          top: 148.75px;
+          right: -22.75px;
+          height: 25px;
+          z-index: 999;
+        }
+      }
+    }
+  }
+  .invite-box {
+    padding: 1.87px 40px 0px;
+    text-align: center;
+    font-size: 18px;
+    .invite-btn {
+      background: url("https://static-as.missfresh.cn/frontend/mfs3/web/static/img/invite-vip.c469ec7.png");
+      color: #F69C0B;
+    }
+    .open-vip {
+      margin-top: 12.5px;
+      background: url("https://static-as.missfresh.cn/frontend/mfs3/web/static/img/open-vip.331b4d4.png");
+      color: #FFFFFF;
+    }
+    .btn-box {
+      height: 40px;
+      line-height: 40px;
+      background-size: 100% 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+  }
+  div {
+    .vip-title {
+      background: white;
+      padding: 0 9.375px;
+      height: 90px;
+      font-size: 21.5px;
+      color: #474245;
+      position: relative;
+      .title-box{
+        position: absolute;
+        bottom: 0;
+        .main{
+          font-weight: bold;
+          width: 215.625px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          margin-bottom: -1.25px;
+        }
+        .sub{
+          width: 215.625px;
+          font-size: 7.5px;
+          color: #969696;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+    .redpack-box{
+      overflow-x: scroll;
+      width: 100%;
+      white-space: nowrap;
+      vertical-align: middle;
+      height: 120px;
+      .redpack-img:first-child{
+        margin-left: 9.375px;
+      }
+      .redpack-img{
+        margin-top: 22.5px;
+        display: inline-block;
+        vertical-align: middle;
+        height: 87.5px;
+        margin-right: 12.5px;
+      }
+    }
+  }
+}
+.product-item-container{
+  padding: 0 6.25px;
+  background: #fff;
+  .product-item{
+    background: #fff;
+    width: 100%;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-flex: 1;
+    flex: 1 1 0;
+    position: relative;
+    box-sizing: border-box;
+    padding: 13.75px 0;
+    border-bottom: 2.25px solid #f5f5f5;
+    .item-image{
+      width: 120px;
+      height: 120px;
+      margin-right: 9.375px;
+      margin-left: 3.125px;
+      position: relative;
+    }
+    .promotion{
+      position: absolute;
+      left: 0;
+      top: 0;
+      img{
+        height: 25px;
+      }
+    }
+    .item-detail{
+      -webkit-box-flex: 1;
+      flex: 1;
+      position: relative;
+      .item-title{
+        margin-top: 6.25px;
+      }
+      .item-tag{
+        line-height: 13.125px;
+        height: 16.25px;
+      }
+      .item-price{
+        margin-bottom: 6.25px;
+        .product-item-price{
+          font-size: 18px;
+          line-height: 1;
+          color: #ff4891;
+          margin-top: 20px;
+        }
+      }
+      .item-cart{
+        position: absolute;
+        right: 0;
+        bottom: 6.25px;
+        .cart{
+          .image{
+            width: 45px;
+            display: block;
+            transform: translateY(18%)
+          }
+        }
+      }
+    }
+  }
+}
+.product-item-image{
+  img{
+    width: 120px;
+    height: 120px;
+  }
+}
+.product-item-title {
+  .sub-title {
+    font-size: 16px;
+    color: #474245;
+  }
+  .mess-title{
+    font-size: 13px;
+    color: #969696;
+  }
+  p{
+    width: 230px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
