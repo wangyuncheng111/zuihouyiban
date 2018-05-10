@@ -16,7 +16,7 @@ class Login extends Component {
             <ul className="box-list">
                 <li>
 
-                    <input type="text" placeholder='请输入用户名' ref={this.username}/>
+                    <input type="text" placeholder='输入你的小名，老铁' ref={this.username}/>
                 </li>
                 <li>
 
