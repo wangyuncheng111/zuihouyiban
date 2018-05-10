@@ -14,7 +14,7 @@ import {withRouter} from 'react-router-dom'
     render() {
         return (
             <div className="Header">
-                <i className='iconfont icon-fanhui'
+                <i className='iconfont icon-fan'
                    onClick={this.back}
                 ></i>
                 {this.props.children}

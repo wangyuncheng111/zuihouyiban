@@ -12,15 +12,15 @@ class Login extends Component {
     }
     render() {
         return (<div className="full login">
-            <Header>登录</Header>
+            <Header>登陆</Header>
             <ul className="box-list">
                 <li>
-                    <label >用户名</label>
-                    <input type="text" ref={this.username}/>
+
+                    <input type="text" placeholder='请输入用户名' ref={this.username}/>
                 </li>
                 <li>
-                    <label >密码</label>
-                    <input type="text" ref={this.password}/>
+
+                    <input type="password" placeholder='管好你的眼，小鬼' ref={this.password}/>
                 </li>
                 <li>
                     <button onClick={()=>{
@@ -33,6 +33,7 @@ class Login extends Component {
                 <li>
                     <Link to="/reg">注册</Link>
                 </li>
+                <span>为方便您下次登陆，请记住您的密码</span>
             </ul>
         </div>)
     }

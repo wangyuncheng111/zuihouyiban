@@ -1,5 +1,6 @@
 import React from 'react';
-import './index.less'
+import './index.less';
+import {Link} from 'react-router-dom'
 export default class My extends React.Component{
     constructor(){
         super()
@@ -9,7 +10,7 @@ export default class My extends React.Component{
             <div className="header-home">
                 <div className="header-module">
                     <div className="header-title">
-                        <button className="btn">用户登录</button>
+                        <button className="btn"><Link to="/login">用户登录</Link></button>
                         <div className="home-total">
                             <li>
                                 <i>0</i>元<br/>
