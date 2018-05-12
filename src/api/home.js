@@ -2,7 +2,7 @@ import axios from './index';
 
 export function getSlider() {
     //获取轮播图的方法
-   return axios.get('/slider');
+    return axios.get('/slider');
 }
 export function getFruits(offset,limit) { //列表
     return axios.get(`/list?offset=${offset}&limit=${limit}`)
@@ -12,4 +12,7 @@ export function getFruitsDetail(id) { //详情
 }
 export function getTrolley(id){ //购物车
     return axios.get('/shop?id='+id)
+}
+export function getNumber(id) { // 获取购物车数量
+    return axios.get('/count?id='+id)
 }

@@ -17,3 +17,8 @@ export const SET_FRUITS_SUCCESS = 'SET_FRUITS_SUCCESS';
 
 //获取详情页
 export const DETAILS_FRUIT = "DETAILS_FRUIT";
+
+
+
+//购物车加减
+export const ADD_CART = 'ADD_CART';

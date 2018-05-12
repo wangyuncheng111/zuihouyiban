@@ -1,5 +1,5 @@
 import * as Types from '../action-types';
-import {getSlider, getFruits, getFruitsDetail} from '../../api/home'
+import {getSlider, getFruits, getFruitsDetail,getNumber} from '../../api/home'
 
 let actions = {
     setLesson(lesson) {
@@ -39,8 +39,15 @@ let actions = {
                 })
             });
         })
+    },
+    setCartCount(id){
+        // return {type:Types.ADD_CART,count:1}
+        return (display =>{
+            display({
+                type:Types.ADD_CART,count:getNumber(id).then(val=>val)
+            })
+        })
     }
-
 
 };
 export default actions;

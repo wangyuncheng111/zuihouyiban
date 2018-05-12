@@ -4,6 +4,7 @@ import {connect} from "react-redux"
 import actions from '../../store/actions/home'
 import index from "../../store/reducers";
 import {loadMore,pullRefresh} from '../../common/util';
+
 class VipList extends Component{
     constructor(){
         super()

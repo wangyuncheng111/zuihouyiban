@@ -15,12 +15,13 @@ let initState = {
     },
     fruits: {
         hasMore: true,
-        limit: 5,
+        limit: 24,
         offset: 0,
-        loading: true,
+        loading: false,
         lists: [],
         check: true,
-        detail:[]
+        detail: [],
+        number: 0
     }
 };
 export default function home(state = initState, action) {
@@ -37,16 +38,16 @@ export default function home(state = initState, action) {
         case Types.SET_FRUITS_SUCCESS:
             return {
                 ...state,
-            fruits: {
-        ...state.fruits,
-                loading: false,
-                hasMore: action.payload.hasMore,
-                lists: action.payload.fruits
-        }
-    };
+                fruits: {
+                    ...state.fruits,
+                    loading: false,
+                    hasMore: action.payload.hasMore,
+                    lists: action.payload.fruits
+                }
+            };
         case Types.DETAILS_FRUIT:
-            console.log(action.payload,'asd');
-            return {...state,fruits:{...state.fruits,detail:action.payload[0]}};
+            console.log(action.payload, 'asd');
+            return {...state, fruits: {...state.fruits, detail: action.payload[0]}};
 
         case Types.CLEAR_LESSON:
             return {
@@ -58,8 +59,11 @@ export default function home(state = initState, action) {
                     offset: 0,
                     lists: []
                 }
-            }
+            };
+        case Types.ADD_CART:
+            return {...state,fruits:{...state.fruits,number:action.count+1}}
     }
+
     return state;
 }
 // return {...state, fruits:{ ...state.fruits, loading: false}};

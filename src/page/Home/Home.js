@@ -7,14 +7,13 @@ import actions from "src/store/actions/home";
 import HomeSwiper from './HomeSwiper';
 import {loadMore, pullRefresh} from '../../common/util';
 import {Link} from 'react-router-dom'
-
+import {getTrolley} from '../../../src/api/home'
+import HomeCart from "src/page/Home/HomeCart";
 class Home extends React.Component {
     constructor() {
         super();
         this.content = React.createRef();
-        this.shopping = React.createRef();
-        this.gouwu = React.createRef();
-        this.state = {number: 0}
+        // this.state = {number: 0}
     }
 
     chooseLesson = (val) => {
@@ -30,31 +29,9 @@ class Home extends React.Component {
         loadMore(this.content.current, this.loadMore);
         pullRefresh(this.content.current, this.props.refresh);
     }
-
-    handleClick = () => {
-        console.log(this.shopping.current.style);
-        this.setState({number: this.state.number + 1});
-        console.log(this.state.number);
-        if (this.state.number > -1) {
-            this.shopping.current.style.display = 'none';
-            this.gouwu.current.style.display = 'block';
-        }
+    loadMore = () =>{
+        this.props.setFruitsList();
     };
-    handleMinus = () => {
-        if (this.state.number > 0) {
-            this.setState({number: this.state.number - 1})
-        } else {
-            this.setState({number: 0});
-        }
-        if (this.state.number < 2) {
-            this.gouwu.current.style.display = 'none';
-            this.shopping.current.style.display = 'block';
-        }
-    };
-    handleAdd = () => {
-        this.setState({number: this.state.number + 1})
-    };
-
     render() {
         return (
             <div className='home full'>
@@ -94,7 +71,7 @@ class Home extends React.Component {
                         {this.props.fruits.lists.map((item, index) => (
 
                             <div key={index} className="content-list-item">
-                                <Link to={{pathname:'/detail'}}>
+                                <Link to={{pathname:'/detail',state:item}}>
                                     <div className="item-img">
                                         <div className="item-img-left">
                                             <img src={item.imgB} alt=""/>
@@ -109,13 +86,7 @@ class Home extends React.Component {
                                         <span className="detail-describe">{item.describe}</span>
                                         <span className="detail-text">{item.text}</span><br/>
                                         <span className="detail-price">{item.price}</span>
-                                        <i ref={this.shopping} className="iconfont icon-gouwuche icon"
-                                           onClick={this.handleClick}></i>
-                                        <div ref={this.gouwu} className="gouwu">
-                                            <button className="left-button" onClick={this.handleMinus}>-</button>
-                                            {Math.max(0, this.state.number)}
-                                            <button className="right-button" onClick={this.handleAdd}>+</button>
-                                        </div>
+                                        <HomeCart/>
                                     </div>
                                 </Link>
                             </div>

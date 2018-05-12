@@ -51,6 +51,15 @@ app.get('/shop',function(req,res){
     fs.writeFileSync('./shopCart.js',JSON.stringify(shopCart),'utf8')
 });
 
+
+app.get('/count',function (req,res) {
+    let {id} = req.query;
+    let fruit = fruits.filter(item=>item.Id == id);
+    // fruit = JSON.parse(fruit);
+    // let number = fruit.number;
+    res.json(fruit[0].number);
+    console.log(fruit[0].number,"number");
+});
 let userList = [];
 // 登录成功后 {error:0,msg:'登录成功了',user:'xxxx'}
 // 登录失败后 {error:1,msg:'用户密码不正确',user:null}
@@ -65,6 +74,10 @@ app.post('/login', function (req, res) {
         res.json({error: 1, msg: '用户密码不正确', user: null});
     }
 });
+
+
+
+
 // 注册成功后 {error:0,msg:'注册成功',user:null}
 // 注册失败后 {error:1,msg:'用户已经注册过了',user:null}
 app.post('/reg', function (req, res) {
